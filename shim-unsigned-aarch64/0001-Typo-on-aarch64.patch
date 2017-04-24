@@ -1,0 +1,26 @@
+From db142ce288a63db2e8f7858ba7564158cc7a64e5 Mon Sep 17 00:00:00 2001
+From: Peter Jones <pjones@redhat.com>
+Date: Tue, 30 Jun 2015 14:54:43 -0400
+Subject: [PATCH] Typo on aarch64 :/
+
+Signed-off-by: Peter Jones <pjones@redhat.com>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 46d0234..1181b8a 100644
+--- a/Makefile
++++ b/Makefile
+@@ -52,7 +52,7 @@ ifeq ($(ARCH),ia32)
+ 		"-DDEBUGDIR=L\"/usr/lib/debug/usr/share/shim/ia32-$(VERSION)$(RELEASE)/\""
+ endif
+ ifeq ($(ARCH),aarch64)
+-	CFLAGS += "-DEFI_ARCH=L\"aa64\""
++	CFLAGS += "-DEFI_ARCH=L\"aa64\"" \
+ 		"-DDEBUGDIR=L\"/usr/lib/debug/usr/share/shim/aa64-$(VERSION)$(RELEASE)/\""
+ endif
+ 
+-- 
+2.4.3
+
